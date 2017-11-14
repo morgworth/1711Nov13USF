@@ -1,0 +1,2 @@
+INDEX VERSION 1.129+C:\Users\AbdoulKarim\Desktop\my_git_repos\1711Nov13USF\Abdoul_Dolo_Code\Week1\.metadata\.plugins\org.eclipse.jdt.core
+1067094681.index
