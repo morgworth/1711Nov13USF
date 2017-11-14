@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\AbdoulKarim\Desktop\my_git_repos\1711Nov13USF\Abdoul_Dolo_Code\Week1\src"/>
 		<item value="C:\Users\AbdoulKarim\Desktop\my_git_repos\1711Nov13USF\Abdoul_Dolo_Code\Week1"/>
 	</list>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1510624816130" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
 </section>
