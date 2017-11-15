@@ -1,0 +1,34 @@
+
+public class ClassExamplesWeek1Exceptions {
+
+	
+	
+	// Throwable
+	//    |		   \
+	// 	  |		     \
+	//  Error          Exception
+	//					   \
+	//						\
+	//						Runtime Exception (unchecked)
+	
+	
+	/*
+	 *  Throw    / throws
+	 * 		->> propagating
+	 * 
+	 * try catch finally are all // catch exceptions		
+	 */
+	
+	public static void main(String[] args){
+		
+		int[] arr = new int[4];
+		arr[0] = 1;
+		arr[6] = 6;
+		
+		
+		
+		
+	//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	
+	}
+	
+}

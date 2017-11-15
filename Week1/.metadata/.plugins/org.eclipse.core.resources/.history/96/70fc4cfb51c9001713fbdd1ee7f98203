@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+
+public class ClassExamplesWeek1ControlFlow {
+
+	
+	/*
+	 * 
+	 * A java statement is a complete unit of execution with a semicolon following it
+	 * 
+	 * A control flow statement breaks up the flow of 
+	 * execution by using decision making, looping, and branching,
+	 * allowing the application to selectively execute
+	 * particular segments of code
+	 * 
+	 * 
+	 */
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		System.out.println("Enter a number: ");
+		Scanner scan = new Scanner(System.in);
+		int x = scan.nextInt();
+		
+		
+		
+		// if statement
+		
+		if(x<10){
+			System.out.println("Hello");
+		}else if (x<100){
+			System.out.println("There");
+		}else{
+			System.out.println("your number is out of here!");
+		}
+	
+		
+		
+		//Ternary
+		System.out.println(x<10? "Hello" : "your number is out of here!");
+		
+		// While loop
+		while(x<5){
+			System.out.println("While statement: " + x);
+			
+		}
+		
+		// Do-While
+		do{
+			System.out.println("Do while Statement: " + x);
+			x++;
+		}while(x<5);
+		
+		
+		for(int i = 0; i < x; i++){
+			System.out.println("Whooooo " + i);
+		}
+		
+		
+		
+	}
+	
+	
+
+}

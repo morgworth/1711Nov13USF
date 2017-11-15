@@ -1,0 +1,10 @@
+
+public class COnstructorTest {
+
+	
+	public static void main(String[] args){
+		ObjectsClassJava object = new ObjectsClassJava();
+		ObjectsClassJava object = new ObjectsClassJava(1,2,3);
+	}
+	
+}

@@ -1,0 +1,25 @@
+
+public class ClassExamplesWeek1Exceptions {
+
+	
+	
+	// Throwable
+	//    |		   \
+	// 	  |		     \
+	//  Error          Exception
+	//					   \
+	//						\
+	//						Runtime Exception (unchecked)
+	
+	
+	/*
+	 *  Throw    / throws
+	 * 		->> propagating
+	 * 
+	 * try catch finally are all // catch exceptions		
+	 */
+	
+	
+	
+	
+}

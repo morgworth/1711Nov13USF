@@ -1,0 +1,42 @@
+
+public class ClassExamplesWeek1Exceptions {
+
+	
+	
+	// Throwable
+	//    |		   \
+	// 	  |		     \
+	//  Error          Exception
+	//					   \
+	//						\
+	//						Runtime Exception (unchecked)
+	
+	
+	/*
+	 *  Throw    / throws
+	 * 		->> propagating
+	 * 
+	 * try catch finally are all // catch exceptions
+	 * 
+	 * Exceptions site for reference: http://server2client.com/images/exceptionhierarchy.jpg
+	 * 
+	 * 		
+	 */
+	
+	public static void main(String[] args){
+		
+		int[] arr = new int[4];
+		arr[0] = 1;
+		try{
+		arr[6] = 6;
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+		}
+		System.out.println(arr[0]);
+		System.out.println("Passed exception");
+		
+		
+	//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	
+	}
+	
+}
