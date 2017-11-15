@@ -15,6 +15,7 @@ public class AboutStrings {
 	System.out.println("3 " + a.equals(d));
 	System.out.println("4 " + (a==d));
 	System.out.println("5 " + a.equalsIgnoreCase(b));*/
+
 	
 	test(a);
 	//a = test(a);
