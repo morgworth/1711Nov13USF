@@ -168,3 +168,12 @@ org.apache.lucene.index.IndexNotFoundException: no segments* file found in org.a
 2017-11-14 09:31:35,703 [pool-8-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
 2017-11-14 16:42:18,070 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/help,null}
 2017-11-14 16:42:18,233 [Stop Help Server] WARN  o.e.j.util.thread.QueuedThreadPool - 6 threads could not be stopped
+2017-11-15 09:40:01,197 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 10:22:55,415 [pool-6-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 10:22:55,513 [pool-8-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 10:22:55,627 [pool-10-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 10:22:55,632 [Worker-11] WARN  o.e.r.i.rcp.repo.ModelRepository - 'remote-models (http://download.eclipse.org/recommenders/models/kepler/, releases+snapshots)' did not send ETAG header for 'jre:jre:pom:1.0.0'.
+2017-11-15 14:43:31,570 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 14:43:35,426 [pool-6-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 14:43:36,015 [pool-8-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2017-11-15 14:43:36,513 [pool-10-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
