@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 William Rhodes:1999
 Tony Stark:1988
+=======
+Genesis Bonds:100
+Rick James:65
+>>>>>>> master

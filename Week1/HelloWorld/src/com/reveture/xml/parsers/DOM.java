@@ -1,0 +1,81 @@
+package com.reveture.xml.parsers;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class DOM {
+
+	
+	/*
+	 * DOM XML Parser in JavaL 
+	 * DOM stands for Document Object Model and it represents
+	 * XML in a tree format, where every element represents a 
+	 * tree branch. A DOM parser creates an in-memory tree representation
+	 * of the XML file, then parses it. So it requires more memory.
+	 * DOM parsing is fast for a small XML file but is slow or 
+	 * may not even load largerXML files because it requires 
+	 * a lot of memory to create an XML DOM tree. 
+	 */
+	
+	static String filename = "HelloWorld/src/com/revature/xml/people.xml";
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Document represents out XML tree
+		
+		
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document doc = db.parse(new File(filename));
+			doc.normalize(); // optional but recommended
+			
+			//get root node
+			String root = doc.getDocumentElement().getNodeName();
+			
+			//get persons nodes
+			NodeList persons = doc.getElementsByTagName("person");
+			for(int i=0; i < persons.getLength(); i++){
+				// get 'leaves' of the node
+				NodeList leaves = persons.item(i).getChildNodes();
+				for(int x=0; x< leaves.getLength(); x++){
+					if(leaves.item(x).getNodeType() == Node.ELEMENT_NODE){
+						System.out.println(leaves.item(x).getTextContent());
+					}
+				}
+			}
+			
+			
+			
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	
+	
+//	public static InputStream getFileInClasspath(S)
+	
+	
+	
+	
+}

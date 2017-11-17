@@ -13,6 +13,7 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+<<<<<<< HEAD
 public class WriteXML {
 
 	//static String filename = "HelloWorld/src/logs/samplexml.xml";
@@ -41,11 +42,35 @@ public class WriteXML {
 			root.appendChild(lux);
 			Element ev = doc.createElement("Electric");
 			root.appendChild(ev);
+=======
+
+public class WriteXML {
+	
+	static String filename = "src/logs/samplexml.xml";
+	
+	public static void main(String[] args) {
+		try{
+			//create XML doc
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.newDocument();
+			
+			//add elements:
+			
+			//root element:
+			Element root = doc.createElement("cars");
+			doc.appendChild(root);
+			
+			//other elements:
+			Element lux = doc.createElement("luxury");
+			root.appendChild(lux);
+>>>>>>> master
 			
 			Attr attr = doc.createAttribute("company");
 			attr.setValue("Ferrari");
 			lux.setAttributeNode(attr);
 			
+<<<<<<< HEAD
 			Attr attr1 = doc.createAttribute("Owner");
 			attr1.setValue("Tony Stark");
 			ev.setAttributeNode(attr1);
@@ -54,10 +79,16 @@ public class WriteXML {
 			
 			
 			//write the content to xml
+=======
+			
+			
+			//write the content to xml 
+>>>>>>> master
 			TransformerFactory tf = TransformerFactory.newInstance();
 			Transformer tr = tf.newTransformer();
 			DOMSource source = new DOMSource(doc);
 			StreamResult result = new StreamResult(new File(filename));
+<<<<<<< HEAD
 			tr.transform(source,  result);
 			StreamResult consoleResult = new StreamResult(System.out);
 			tr.transform(source, consoleResult);
@@ -69,4 +100,16 @@ public class WriteXML {
 		}
 	}
 	
+=======
+			tr.transform(source, result);
+			StreamResult consoleResult = new StreamResult(System.out);
+			tr.transform(source,consoleResult);
+			
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+>>>>>>> master
 }
