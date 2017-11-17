@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class StudentIO {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	static String filename = "HelloWorld/src/logs/students.txt";
 	public static void main(String[] args) {
@@ -35,6 +36,8 @@ public class StudentIO {
 			bw.write(student.toString());
 		}catch(IOException e) {
 =======
+=======
+>>>>>>> master
 	
 	static String filename = "src/logs/students.txt";
 	public static void main(String[] args) {
@@ -56,12 +59,16 @@ public class StudentIO {
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));){
 			bw.write(student.toString());
 		} catch (IOException e) {
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 			e.printStackTrace();
 		}
 	}
 	
 	static ArrayList<Student> readStudents(){
+<<<<<<< HEAD
 <<<<<<< HEAD
 		ArrayList<Student> students = new ArrayList<Student>();
 		try(BufferedReader br = new BufferedReader(new FileReader(filename));){
@@ -86,6 +93,8 @@ public class StudentIO {
 
 
 =======
+=======
+>>>>>>> master
 		ArrayList<Student> students = new ArrayList<>();
 		try(BufferedReader br = new BufferedReader(new FileReader(filename));){
 			String line = null;
@@ -107,4 +116,7 @@ public class StudentIO {
 	}
 
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

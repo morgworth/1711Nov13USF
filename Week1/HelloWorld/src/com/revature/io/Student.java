@@ -3,6 +3,7 @@ package com.revature.io;
 import java.io.Serializable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // POJO  = Plain ol Java Object
 
 public class Student implements Serializable {
@@ -34,6 +35,8 @@ public Student(String name, int age) {
 	
 
 =======
+=======
+>>>>>>> master
 //POJO = Plain Ol' Java Object
 public class Student implements Serializable {
 	
@@ -56,6 +59,9 @@ public class Student implements Serializable {
 		this.name = name;
 		this.age = age;
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 	public String getName() {
@@ -75,12 +81,15 @@ public class Student implements Serializable {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	@Override
 	public String toString(){
 		return name + ":" + age + "\n";
 	}
 =======
+=======
+>>>>>>> master
 	@Override
 	public String toString() {
 		return name + ":" + age + "\n";
@@ -90,5 +99,8 @@ public class Student implements Serializable {
 	
 	
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

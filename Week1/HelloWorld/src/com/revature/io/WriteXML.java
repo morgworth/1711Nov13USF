@@ -14,6 +14,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class WriteXML {
 
 	//static String filename = "HelloWorld/src/logs/samplexml.xml";
@@ -43,6 +44,8 @@ public class WriteXML {
 			Element ev = doc.createElement("Electric");
 			root.appendChild(ev);
 =======
+=======
+>>>>>>> master
 
 public class WriteXML {
 	
@@ -64,12 +67,16 @@ public class WriteXML {
 			//other elements:
 			Element lux = doc.createElement("luxury");
 			root.appendChild(lux);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 			
 			Attr attr = doc.createAttribute("company");
 			attr.setValue("Ferrari");
 			lux.setAttributeNode(attr);
 			
+<<<<<<< HEAD
 <<<<<<< HEAD
 			Attr attr1 = doc.createAttribute("Owner");
 			attr1.setValue("Tony Stark");
@@ -84,10 +91,16 @@ public class WriteXML {
 			
 			//write the content to xml 
 >>>>>>> master
+=======
+			
+			
+			//write the content to xml 
+>>>>>>> master
 			TransformerFactory tf = TransformerFactory.newInstance();
 			Transformer tr = tf.newTransformer();
 			DOMSource source = new DOMSource(doc);
 			StreamResult result = new StreamResult(new File(filename));
+<<<<<<< HEAD
 <<<<<<< HEAD
 			tr.transform(source,  result);
 			StreamResult consoleResult = new StreamResult(System.out);
@@ -101,6 +114,8 @@ public class WriteXML {
 	}
 	
 =======
+=======
+>>>>>>> master
 			tr.transform(source, result);
 			StreamResult consoleResult = new StreamResult(System.out);
 			tr.transform(source,consoleResult);
@@ -111,5 +126,8 @@ public class WriteXML {
 		}
 	}
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }
