@@ -13,12 +13,11 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 public class WriteXML {
 
 	//static String filename = "HelloWorld/src/logs/samplexml.xml";
-	static String filename = "HelloWorld/src/logs/RhodesWebsite.xml";
+	static String filename = "src/logs/RhodesWebsite.xml";
 	
 	public static void main(String[] args) {
 		try{
@@ -34,91 +33,53 @@ public class WriteXML {
 			
 			// root elements:
 			
-			Element root = doc.createElement("cars");
+			Element root = doc.createElement("Parts");
 			doc.appendChild(root);
 			
+			Element root1 = doc.createElement("Docs");
+			doc.appendChild(root1);
 			
 			// other elements:
-			Element lux = doc.createElement("luxury");
-			root.appendChild(lux);
-			Element ev = doc.createElement("Electric");
-			root.appendChild(ev);
-=======
-=======
->>>>>>> master
+			Element wre = doc.createElement("Plumber");
+			root.appendChild(wre);
+			Element el = doc.createElement("Electtrician");
+			root.appendChild(el);
+			Element hvac = doc.createElement("HVAC");
+			root.appendChild(hvac);
+			Element cool = doc.createElement("AC");
+			root.appendChild(cool);
+			
+			
+			Attr attr = doc.createAttribute("plumbing");
+			attr.setValue("Wrench");
+			wre.setAttributeNode(attr);
 
-public class WriteXML {
-	
-	static String filename = "src/logs/samplexml.xml";
-	
-	public static void main(String[] args) {
-		try{
-			//create XML doc
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.newDocument();
+			Attr attr1 = doc.createAttribute("Electrical");
+			attr1.setValue("Lineman-Pliers");
+			el.setAttributeNode(attr1);
 			
-			//add elements:
+			Attr attr2 = doc.createAttribute("Heating");
+			attr2.setValue("Multimeter");
+			hvac.setAttributeNode(attr2);
 			
-			//root element:
-			Element root = doc.createElement("cars");
-			doc.appendChild(root);
-			
-			//other elements:
-			Element lux = doc.createElement("luxury");
-			root.appendChild(lux);
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-			
-			Attr attr = doc.createAttribute("company");
-			attr.setValue("Ferrari");
-			lux.setAttributeNode(attr);
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-			Attr attr1 = doc.createAttribute("Owner");
-			attr1.setValue("Tony Stark");
-			ev.setAttributeNode(attr1);
-			
+			Attr attr3 = doc.createAttribute("measuring");
+			attr3.setValue("Voltage");
+			cool.setAttributeNode(attr3);
 			
 			
 			
 			//write the content to xml
-=======
-			
-			
-			//write the content to xml 
->>>>>>> master
-=======
-			
-			
-			//write the content to xml 
->>>>>>> master
+
 			TransformerFactory tf = TransformerFactory.newInstance();
 			Transformer tr = tf.newTransformer();
 			DOMSource source = new DOMSource(doc);
 			StreamResult result = new StreamResult(new File(filename));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 			tr.transform(source,  result);
 			StreamResult consoleResult = new StreamResult(System.out);
 			tr.transform(source, consoleResult);
 			
 			
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-	}
-	
-=======
-=======
->>>>>>> master
-			tr.transform(source, result);
-			StreamResult consoleResult = new StreamResult(System.out);
-			tr.transform(source,consoleResult);
 			
 		}
 		catch(Exception e){
@@ -126,8 +87,5 @@ public class WriteXML {
 		}
 	}
 
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
+
 }

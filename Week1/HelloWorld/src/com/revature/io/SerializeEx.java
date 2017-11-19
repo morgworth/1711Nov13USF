@@ -1,11 +1,17 @@
 package com.revature.io;
 
+
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
+
+
+
 
 public class SerializeEx {
 	/*
@@ -17,7 +23,7 @@ public class SerializeEx {
 	 * Externalizable
 	 */
 	
-	static String filename = "src/logs/bytestream.txt";
+	static String filename = "HelloWorld/src/logs/bytestream.txt";
 	
 	void writeStream(Object o){
 		try(ObjectOutputStream oos = new ObjectOutputStream(

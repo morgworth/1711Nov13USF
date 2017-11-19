@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<cars>
-	<luxury company="Ferrari" />
-	<Electric Owner="Tony Stark" />
-</cars>
+<Parts>
+	<Plumber plumbing="Wrench" />
+	<Electtrician Electrical="Lineman-Pliers" />
+	<HVAC Heating="Multimeter" />
+	<AC measuring="Voltage" />
+</Parts>

@@ -8,22 +8,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+
+
 public class StudentIO {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 	static String filename = "HelloWorld/src/logs/students.txt";
 	public static void main(String[] args) {
-		/*Student s1 = new Student("William Rhodes", 1999);
+		Student s1 = new Student("William Rhodes", 1999);
 		Student s2 = new Student("Tony Stark", 1988 );
 		writeStudent(s1);
-		writeStudent(s2);*/
+		writeStudent(s2);
 		ArrayList<Student> studs = new ArrayList<Student>();
+		System.out.println("List name and age: ");
 		studs = readStudents();
-		System.out.println(studs);
-		
+		//System.out.println(studs);
 		SerializableInput serial = new SerializableInput();
-		ArrayList<Student> deserialized = (ArrayList<Student>) serial.readObject();
+		SerializeEx serials = new SerializeEx();
+		serial.writeStream(studs);
+		serials.writeStream(studs);
+		@SuppressWarnings("unchecked")
+		ArrayList<Student> deserialized = (ArrayList<Student>) serials.readObject();
 		System.out.println(deserialized);
 		
 	}
@@ -31,71 +37,16 @@ public class StudentIO {
 	
 	
 	static void writeStudent(Student student){
-
+		// Try with resources 
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename , true));){
 			bw.write(student.toString());
 		}catch(IOException e) {
-=======
-=======
->>>>>>> master
-	
-	static String filename = "src/logs/students.txt";
-	public static void main(String[] args) {
-		//Student s2 = new Student("Rick James", 65);
-		//writeStudent(s2);
-		
-		ArrayList<Student> studs = new ArrayList<Student>();
-		studs = readStudents();
-		
-		SerializeEx serial = new SerializeEx();
-		//serial.writeStream(studs);
-		@SuppressWarnings("unchecked")
-		ArrayList<Student> deserialized = (ArrayList<Student>) serial.readObject();
-		System.out.println(deserialized);	
-	}
-	
-	static void writeStudent(Student student){
-		//Try-with-resources
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));){
-			bw.write(student.toString());
-		} catch (IOException e) {
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-			e.printStackTrace();
+				e.printStackTrace();
 		}
 	}
-	
+
 	static ArrayList<Student> readStudents(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ArrayList<Student> students = new ArrayList<Student>();
-		try(BufferedReader br = new BufferedReader(new FileReader(filename));){
-		String line = null;
-		while((line=br.readLine())!=null){
-			String[] about= line.split(":");
-			Student temp = new Student();
-			temp.setName(about[0]);
-			temp.setAge(Integer.parseInt(about[1]));
-			students.add(temp);
-			
-		}
-		}catch (FileNotFoundException e ) {
-			e.printStackTrace();
-		} catch(IOException e ){
-			e.printStackTrace();
-		}
-		return(students);
-	}
-}
-
-
-
-=======
-=======
->>>>>>> master
-		ArrayList<Student> students = new ArrayList<>();
+	ArrayList<Student> students = new ArrayList<>();
 		try(BufferedReader br = new BufferedReader(new FileReader(filename));){
 			String line = null;
 			while((line=br.readLine())!=null){
@@ -116,7 +67,4 @@ public class StudentIO {
 	}
 
 }
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
+

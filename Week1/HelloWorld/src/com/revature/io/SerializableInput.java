@@ -34,8 +34,9 @@ public class SerializableInput {
 		}
 	}
 	
-	Object readObject(){
-		Object obj = null;
+	Object readObject(Object a){
+		Object obj = a;
+		
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))){
 		obj = ois.readObject();	
 		} catch (FileNotFoundException e) {
