@@ -16,12 +16,6 @@ public class Service {
 			dao.addUser(u);
 			return u;
 		}
-		/*public User checkUser(User u) {
-			
-			dao.checkUser(u);
-			return u;
-			
-		}
-	*/
+		
 	
 }

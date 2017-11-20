@@ -18,7 +18,7 @@ public class RunBank {
 		
 		
 	static void run() {	
-		System.out.println("Welcome to BondsBank\n Would you like " 
+		System.out.println("Welcome to Rhodes Accounts\n please " 
 				+ " to login(1) or Create account(2) or close(3):");
 		
 		Scanner scan = new Scanner(System.in);

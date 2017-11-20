@@ -38,7 +38,7 @@ public class StudentIO {
 	
 	static void writeStudent(Student student){
 		// Try with resources 
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename , true));){
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename , true))){
 			bw.write(student.toString());
 		}catch(IOException e) {
 				e.printStackTrace();
@@ -47,7 +47,7 @@ public class StudentIO {
 
 	static ArrayList<Student> readStudents(){
 	ArrayList<Student> students = new ArrayList<>();
-		try(BufferedReader br = new BufferedReader(new FileReader(filename));){
+		try(BufferedReader br = new BufferedReader(new FileReader(filename))){
 			String line = null;
 			while((line=br.readLine())!=null){
 				String[] about = line.split(":");

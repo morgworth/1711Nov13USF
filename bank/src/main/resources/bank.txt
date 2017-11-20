@@ -1,1 +1,1 @@
-	
+	User id 0, firstname null, lastname null, username null, password null, balance 0.0
