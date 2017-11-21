@@ -74,8 +74,8 @@ public class User {
 	}
 
 	public String toFile() {
-		return "User id " + id + ", firstname " + firstname + ", lastname " + lastname + ", username " + username
-				+ ", password " + password + ", balance " + balance;
+		return   id + ", " + firstname + ", " + lastname + ", " + username
+				+ ", " + password + ", " + balance + "\n";
 	}
 	
 	

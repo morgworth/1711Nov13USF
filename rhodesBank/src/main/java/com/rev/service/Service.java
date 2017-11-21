@@ -19,7 +19,7 @@ public class Service {
 		// need to validate the user 
 		// and add if does not exist
 
-
+	
 
 
 		if(existsUser(u) == false) {
@@ -36,7 +36,7 @@ public class Service {
 		return u;
 	}
 
-	public User existsUser(User u) {
+	public User getUser(User u) {
 
 		
 		try(BufferedReader br = new BufferedReader(new FileReader(filename))){
@@ -58,6 +58,15 @@ public class Service {
 		return u;
 	}
 
+	public boolean existsUser (User u) {
+		
+		
+		
+		
+		return false;
+		
+		
+	}
 		
 }	
 		

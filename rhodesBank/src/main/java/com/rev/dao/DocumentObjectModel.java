@@ -6,7 +6,7 @@ public interface DocumentObjectModel {
 	
 	User addUser(User u);
 	User getUser(String username);
-	User existsUser(User u);
-	User existsBalance(double balance);
+	//User existsUser(User u);
+	//User existsBalance(double balance);
 
 }
