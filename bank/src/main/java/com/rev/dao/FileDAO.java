@@ -13,9 +13,8 @@ public class FileDAO implements DAO {
 		
 		//https://stackoverflow.com/questions/24671665/check-if-input-already-exists-in-textfile-with-java
 		// example of what I need to do.
-			
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename,true))){
-			// should not be able to add users with a username that already 
+	  		// should not be able to add users with a username that already 
 			// exists add logic to validate inside of service AKA business layer
 			
 		

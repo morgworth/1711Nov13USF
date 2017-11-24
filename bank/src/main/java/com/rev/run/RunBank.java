@@ -12,7 +12,7 @@ import com.rev.service.Service;
  * This is the bank program with added functionality to add remove and check the 
  * balance of the bank account of the user once the user has been validated
  * as existing and passed through using a password. 
- * Completed on Nov 20 2017 with coaching from Dean Terrell. 
+ *
  * 
  * 
  * 
@@ -28,25 +28,27 @@ public class RunBank {
 	public static void main(String[] args) {
 
 		run();
+		
 
 	}
 
 
 
 	static void run() {	
-		System.out.println("Welcome to Rhodes Accounts\n please " 
-				+ " to login(1) or Create account(2) or close(3):");
+		System.out.println("Welcome to Rhodes Accounts please\n " 
+				+ " to login(1) or Create account(2) or close(3)\n>:");
 
-		Scanner scan = new Scanner(System.in);
-		String checkuser2 = scan.nextLine();
+		Scanner runscan = new Scanner(System.in);
+		String checkuser2 = runscan.nextLine();
 		switch(checkuser2){
 		case "1": login(); 
 		break;
-		case "2": createAccount();
+		case "2": createAccount(); run();
 		break;
 		case "3": System.out.println("Goodbye.");
 		break;
 		default: run();
+		//break;
 
 		}
 
@@ -57,46 +59,48 @@ public class RunBank {
 
 
 
-		Scanner scan2 = new Scanner(System.in);
+		Scanner login2 = new Scanner(System.in);
 		String checkuser2;
 		User u = new User();
 
 		System.out.println(" Please enter your username: ");
 
 		System.out.println("Username: ");
-		checkuser2 = scan2.nextLine();
+		checkuser2 = login2.nextLine();
 		u.setUsername(checkuser2);
 
 		if(service.existsUser(u) == false){
 			System.out.println("This username is not available.");
-			return u;
+			return u;       
 		}
 
 		u = service.getUser(u);
 		System.out.println("Your password: ");
-		checkuser2 = scan2.nextLine();
+		checkuser2 = login2.nextLine();
+		System.out.println("Password is " + u.getPassword());
+		System.out.println("check password is: " + checkuser2);
 
-		if(u.getPassword().equals(checkuser2)) {
+		if(u.getPassword().equals(checkuser2) == false) {
 			return u;
 
 		}
-		System.out.println("Password is" + u.getPassword());
-		
-		
+
 
 		do {
-			System.out.println("Deposit MoMoney (1), Withdraw (2), Current Balance (3), Exit (4)" 
-					+ "\n>: ");
-			checkuser2 = scan2.nextLine();
+
+			System.out.println("Deposit MoMoney (1), Withdraw (2), Current Balance (3), Exit (4)" + "\n>: ");
+			checkuser2 = login2.nextLine();
 			switch(checkuser2){
 			case "1": System.out.println("Deposit moMoney: \n >: ");
-			double amount = scan2.nextDouble();
+			double amount = login2.nextDouble();
+			login2.nextLine();
 			double total = amount + u.getBalance();
 			service.updateBalance(u.getBalance(), total);
 			u.setBalance(total);
 			break;
 			case "2": System.out.println("Withdraw yoMoney: \n >: ");
-			double amount2 = scan2.nextDouble();
+			double amount2 = login2.nextDouble();
+			login2.nextLine();
 			double total2 = u.getBalance() - amount2;
 			service.updateBalance(u.getBalance(), total2);
 			u.setBalance(total2);
@@ -106,38 +110,37 @@ public class RunBank {
 			default: 
 				System.out.println("You are exiting the program >: \n\n\t Goodbye");
 				break;
-				}
-			
+			}
+
 		} while(checkuser2.equals("4") == false);
 
-		// before testing with user from static inputs but now useing with checked user 
-		return null;
-
+		return u;
 	}
 
 	static User createAccount() {
-		// try (){
-		System.out.println(" Wellcome , please enter you name: ");
+		//try (){
+		System.out.println(" Wellcome  ");
 		User u = new User();
-		Scanner scan1 = new Scanner(System.in);
+		Scanner create1 = new Scanner(System.in);
 
 		String usercheck;
-
-
+		//System.out.println("please enter your id: ");
+		//int id = create1.nextInt();
+		//u.setId(id);
 		System.out.println("first name: ");
-		usercheck = scan1.nextLine();
+		usercheck = create1.nextLine();
 		u.setFirstname(usercheck);
 		System.out.println("last name: ");
-		usercheck = scan1.nextLine();
+		usercheck = create1.nextLine();
 		u.setLastname(usercheck);
 		System.out.println("Username: ");
-		usercheck = scan1.nextLine();
+		usercheck = create1.nextLine();
 		u.setUsername(usercheck);
 		System.out.println("Your password: ");
-		usercheck = scan1.nextLine();
+		usercheck = create1.nextLine();
 		u.setPassword(usercheck);
 		System.out.println("Please enter a deposit: ");
-		double MoMoney = scan1.nextDouble();
+		double MoMoney = create1.nextDouble();
 		u.setBalance(MoMoney);
 
 

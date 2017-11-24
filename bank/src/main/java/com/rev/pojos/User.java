@@ -13,7 +13,7 @@ public class User {
 	public User() {}
 	
 	public User(int id, String firstname, String lastname, String username, String password, double balance ) {
-		
+		  
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -22,7 +22,7 @@ public class User {
 		this.password = password;
 		this.balance = balance;
 		
-		
+		 
 	}
 
 	public int getId() {
@@ -74,8 +74,7 @@ public class User {
 	}
 
 	public String toFile() {
-		return   id + ", " + firstname + ", " + lastname + ", " + username
-				+ ", " + password + ", " + balance + "\n";
+		return   id + ":" + firstname + ":" + lastname + ":" + username + ":" + password + ":" + balance + "\n";
 	}
 	
 	
