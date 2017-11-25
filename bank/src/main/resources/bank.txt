@@ -3,3 +3,6 @@
 0:tony:stark:ironman:money:1833333.33
 0:will:pen:pen:pass:92424.0
 0:g:g:123:123:550.0
+0:John:Glen:spaceman:pass:9.999E9
+0:bob:hope:funnyman:pass:1.2218023E7
+0:william:rhodes:smart:secret:87654.33

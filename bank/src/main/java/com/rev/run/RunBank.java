@@ -27,34 +27,62 @@ public class RunBank {
 
 	public static void main(String[] args) {
 
-		run();
+		if (run() == true ) {
+			run2();
+		}
+		Scanner scan = new Scanner(System.in);
 		
-
+		
+		scan.close();
+		
+		
 	}
 
 
 
-	static void run() {	
+	static boolean run() {	
 		System.out.println("Welcome to Rhodes Accounts please\n " 
 				+ " to login(1) or Create account(2) or close(3)\n>:");
 
 		Scanner runscan = new Scanner(System.in);
 		String checkuser2 = runscan.nextLine();
 		switch(checkuser2){
-		case "1": login(); 
-		break;
-		case "2": createAccount(); run();
-		break;
+		case "1": login(); return false;
+		//break;
+		case "2": createAccount(); return true; //run();
+		//break;
 		case "3": System.out.println("Goodbye.");
 		break;
 		default: run();
-		//break;
+		break;
 
 		}
-
+		return false;
 	}
 
+	static boolean run2() {	
+		System.out.println("Welcome to Rhodes Accounts please\n " 
+				+ " to login(1) or close(3)\n>:");
 
+		Scanner runscan2 = new Scanner(System.in);
+		String checkuser2 = runscan2.nextLine();
+		switch(checkuser2){
+		case "1": login(); 
+		break;
+		//case "2": createAccount(); return true; //run();
+		//break;
+		case "2": System.out.println("Goodbye.");
+		break;
+		default: run();
+		break;
+
+		}
+		runscan2.close();
+		return false;
+	}
+	
+	
+	
 	static User login() {
 
 
