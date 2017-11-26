@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bank
+Bundle-SymbolicName: bank
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: bank.jar,
+ akrhodey/Desktop/LIFE2017/SNHU/revature/software/etsviewer.jar
+Export-Package: com.rev.dao,
+ com.rev.pojos,
+ com.rev.run,
+ com.rev.service
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
