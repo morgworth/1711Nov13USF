@@ -16,6 +16,11 @@ public interface DAO {
 	 
 	User getUser(String username);
 	
+	User addAccount(Account a);
+	
+	User getAccount(String account);
+	
+	
 	
 	
 	

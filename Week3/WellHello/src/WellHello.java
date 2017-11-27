@@ -1,22 +1,23 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class WellHello {
 
+
+	private static String name = "TheOne";
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		String name = "The One";
-		
-		
-		try (!name.equals(name.toString()){ 
-			
-			Scanner scan = new Scanner(System.in);
-			name = scan.nextLine();
-			System.out.println("Well hello there: " + name);
-		}catch(Exception e) {
-			
+
+		switch (name) {
+		case "The One":
+			System.out.println("Your name is: " + name);
+			break;
+		default:
+			System.out.println("You are not, that which we do not speak of.");
+			break;
 		}
-		return name;
+		
+		
 	}
 
 }
