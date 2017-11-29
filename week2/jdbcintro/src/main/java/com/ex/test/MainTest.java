@@ -12,7 +12,7 @@ public class MainTest {
 	public static void main(String[] args) {
 		DAO dao = new DAOimpl();
 		
-//		ArrayList<Artist> artists = dao.getArtists();
+//		ArrayList<Artist> artists = dao.getArtists();j
 //		
 //		for(Artist art: artists) {
 //			System.out.println(art);
